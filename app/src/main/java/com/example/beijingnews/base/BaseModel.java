@@ -7,6 +7,8 @@ package com.example.beijingnews.base;
  * Time: 16:04
  * Describe: ${as}
  */
-public abstract class BaseModel {
+public abstract class BaseModel<C extends BaseCallBack> {
 
+   public abstract void get(String url,C callBack);
+   public abstract void post(String url,C callBack);
 }
