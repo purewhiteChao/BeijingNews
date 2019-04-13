@@ -1,19 +1,6 @@
 package com.example.beijingnews.model;
 
-import com.example.beijingnews.RetroService;
-import com.example.beijingnews.bean.Bean;
-import com.example.beijingnews.main.MainModel;
-
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
-
-import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
-import rx.Observable;
-import rx.Observer;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 /**
  * Created by Android Studio.

@@ -1,4 +1,4 @@
-package com.example.beijingnews;
+package com.example.beijingnews.model;
 
 import com.example.beijingnews.bean.Bean;
 

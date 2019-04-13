@@ -1,29 +1,25 @@
 package com.example.beijingnews.base;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 
+import com.example.beijingnews.MyApp;
+
 /**
  * Created by Android Studio.
  * User: Administrator
- * Date: 2019/4/10 0010
- * Time: 16:03
+ * Date: 2019/4/12 0012
+ * Time: 15:56
  * Describe: ${as}
  */
-public abstract class BaseActivity<P extends BasePresenter,V extends BaseView,D> extends FragmentActivity implements BaseView<D> {
-    protected P presenter;
+public class BaseActivity extends FragmentActivity {
+
+    protected Context context;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        presenter = initPresenter();
-        presenter.attachView((V)this);
-    }
-    public abstract P initPresenter();
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        presenter.detachView();
+        context = MyApp.getContext();
     }
 }

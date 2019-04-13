@@ -7,5 +7,13 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="ActivityTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/splash_bg_newyear</item>
+    </style>
+    <style name="WelcomeThrme">
+        <item name="android:windowBackground">@drawable/heidong</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
 
 </resources>

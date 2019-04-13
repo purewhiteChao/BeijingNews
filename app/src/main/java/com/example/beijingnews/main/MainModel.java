@@ -1,6 +1,6 @@
 package com.example.beijingnews.main;
 
-import com.example.beijingnews.RetroService;
+import com.example.beijingnews.model.RetroService;
 import com.example.beijingnews.base.BaseModel;
 import com.example.beijingnews.bean.Bean;
 

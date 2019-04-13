@@ -1,14 +1,13 @@
 package com.example.beijingnews.main;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.beijingnews.R;
-import com.example.beijingnews.base.BaseActivity;
+import com.example.beijingnews.base.MVPActivity;
 import com.example.beijingnews.bean.Bean;
 
-public class MainActivity extends BaseActivity<MainPresenter,MainView, Bean> implements MainView {
+public class MainActivity extends MVPActivity<MainPresenter,MainView, Bean> implements MainView {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
