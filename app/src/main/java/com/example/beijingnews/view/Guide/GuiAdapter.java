@@ -1,4 +1,4 @@
-package com.example.beijingnews.Guide;
+package com.example.beijingnews.view.Guide;
 
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;

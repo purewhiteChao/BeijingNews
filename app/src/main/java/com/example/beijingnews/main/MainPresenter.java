@@ -1,11 +1,9 @@
 package com.example.beijingnews.main;
 
 import com.example.beijingnews.base.BasePresenter;
-import com.example.beijingnews.base.BaseView;
-import com.example.beijingnews.bean.Bean;
+import com.example.beijingnews.model.bean.AvatarBean;
+import com.example.beijingnews.model.bean.Bean;
 import com.example.beijingnews.model.ModelManager;
-
-import java.lang.reflect.Constructor;
 
 /**
  * Created by Android Studio.
@@ -15,12 +13,11 @@ import java.lang.reflect.Constructor;
  * Describe: ${as}
  */
 public class MainPresenter extends BasePresenter<MainView> {
-    public void getData(String url){
-        ModelManager.getInstance().getModel(MainModel.class).get(url, new MainCallBack() {
+    public void getData(String url,String path){
+        ModelManager.getInstance().getModel(MainModel.class).getAvater(url, path, new MainCallBack<AvatarBean>() {
             @Override
-            public void successful(Bean bean) {
-
-                getView().success(bean);
+            public void successful(AvatarBean avatarBean) {
+                getView().getAvater(avatarBean);
             }
 
             @Override

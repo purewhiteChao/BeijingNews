@@ -3,6 +3,8 @@
     package="com.example.beijingnews">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".MyApp"
@@ -12,10 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Guide.GuideActivity"
+        <activity android:name=".view.Guide.GuideActivity"
             android:theme="@style/ActivityTheme"></activity>
         <activity
-            android:name=".welcome.WelcomeActivity"
+            android:name=".view.welcome.WelcomeActivity"
             android:theme="@style/WelcomeThrme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.beijingnews.model;
+package com.example.beijingnews.model.service;
 
 /**
  * Created by Android Studio.

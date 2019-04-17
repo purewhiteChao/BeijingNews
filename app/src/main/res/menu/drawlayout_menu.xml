@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/aaa">
+    <item android:title="111"/>
+    <item android:title="222"/>
+    <item android:title="333"/>
+    </group>
+    <group android:id="@+id/bbb">
+    <item android:title="111"/>
+    <item android:title="111"/>
+    <item android:title="111"/>
+    </group>
+    <item android:title="ccc">
+        <menu>
+            <item android:title="qqq"/>
+            <item android:title="qqq"/>
+            <item android:title="qqq"/>
+        </menu>
+    </item>
+</menu>

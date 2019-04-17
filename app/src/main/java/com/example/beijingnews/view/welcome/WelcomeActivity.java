@@ -1,4 +1,4 @@
-package com.example.beijingnews.welcome;
+package com.example.beijingnews.view.welcome;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 
-import com.example.beijingnews.Guide.GuideActivity;
+import com.example.beijingnews.view.Guide.GuideActivity;
 import com.example.beijingnews.R;
 import com.example.beijingnews.base.BaseActivity;
 
@@ -20,7 +20,6 @@ public class WelcomeActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
         initView();
 
         AnimatorSet set = new AnimatorSet();
@@ -40,6 +39,11 @@ public class WelcomeActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected int getContextView() {
+        return R.layout.activity_welcome;
     }
 
     private void initView() {

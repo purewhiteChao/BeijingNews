@@ -1,7 +1,8 @@
 package com.example.beijingnews.main;
 
 import com.example.beijingnews.base.BaseView;
-import com.example.beijingnews.bean.Bean;
+import com.example.beijingnews.model.bean.AvatarBean;
+import com.example.beijingnews.model.bean.Bean;
 
 /**
  * Created by Android Studio.
@@ -11,4 +12,5 @@ import com.example.beijingnews.bean.Bean;
  * Describe: ${as}
  */
 public interface MainView extends BaseView<Bean> {
+    public void getAvater(AvatarBean bean);
 }

@@ -1,4 +1,4 @@
-package com.example.beijingnews.bean;
+package com.example.beijingnews.model.bean;
 
 import java.util.List;
 

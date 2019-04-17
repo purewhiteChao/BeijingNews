@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Guide.GuideActivity">
+    tools:context=".view.Guide.GuideActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager_guide"
@@ -13,6 +13,20 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="83dp"></android.support.v4.view.ViewPager>
 
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_jump_guide"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="100dp"
+        android:text="点击跳转"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:backgroundTint="@drawable/button_color"
+        android:textColor="@drawable/word_color"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,6 +42,7 @@
             android:layout_weight="1" />
 
         <RelativeLayout
+            android:id="@+id/relative_guide"
             android:layout_width="0dp"
             android:layout_height="10dp"
             android:layout_weight="1">

@@ -1,7 +1,7 @@
 package com.example.beijingnews.main;
 
 import com.example.beijingnews.base.BaseCallBack;
-import com.example.beijingnews.bean.Bean;
+import com.example.beijingnews.model.bean.Bean;
 
 /**
  * Created by Android Studio.
@@ -10,6 +10,6 @@ import com.example.beijingnews.bean.Bean;
  * Time: 20:40
  * Describe: ${as}
  */
-public interface MainCallBack extends BaseCallBack<Bean> {
+public interface MainCallBack<T> extends BaseCallBack<T> {
 
 }

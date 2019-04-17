@@ -7,6 +7,9 @@ import android.support.v4.app.FragmentActivity;
 
 import com.example.beijingnews.MyApp;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by Android Studio.
  * User: Administrator
@@ -14,12 +17,15 @@ import com.example.beijingnews.MyApp;
  * Time: 15:56
  * Describe: ${as}
  */
-public class BaseActivity extends FragmentActivity {
+public abstract class BaseActivity extends FragmentActivity {
 
     protected Context context;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(getContextView());
+        ButterKnife.bind(this);
         context = MyApp.getContext();
     }
+    protected abstract int getContextView();
 }
