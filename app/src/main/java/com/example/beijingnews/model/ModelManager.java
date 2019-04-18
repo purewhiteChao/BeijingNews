@@ -1,5 +1,7 @@
 package com.example.beijingnews.model;
 
+import com.example.beijingnews.base.BaseModel;
+
 import java.lang.reflect.Constructor;
 
 /**
@@ -20,7 +22,7 @@ public class ModelManager {
     private ModelManager() {
     }
 
-    public<M> M getModel(Class<M> modelClass){
+    public<M extends BaseModel> M getModel(Class<M> modelClass){
         try {
             Constructor<M> constructor = modelClass.getDeclaredConstructor();
             M m = constructor.newInstance();

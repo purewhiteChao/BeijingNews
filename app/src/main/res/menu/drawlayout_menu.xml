@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:id="@+id/aaa">
-    <item android:title="111"/>
-    <item android:title="222"/>
-    <item android:title="333"/>
-    </group>
-    <group android:id="@+id/bbb">
-    <item android:title="111"/>
-    <item android:title="111"/>
-    <item android:title="111"/>
-    </group>
-    <item android:title="ccc">
-        <menu>
-            <item android:title="qqq"/>
-            <item android:title="qqq"/>
-            <item android:title="qqq"/>
-        </menu>
-    </item>
+    <item android:title="首页" android:icon="@drawable/home" android:id="@+id/home_menu_buttomnavigation"/>
+    <item android:title="新闻" android:icon="@drawable/newscenter" android:id="@+id/news_menu_buttomnavigation"/>
+    <item android:title="服务" android:icon="@drawable/smartservice" android:id="@+id/service_menu_buttomnavigation"/>
+    <item android:title="政务" android:icon="@drawable/govaffairs" android:id="@+id/govaffairs_menu_buttomnavigation"/>
+    <item android:title="设置" android:icon="@drawable/setting" android:id="@+id/setting_menu_buttomnavigation"/>
+
 </menu>

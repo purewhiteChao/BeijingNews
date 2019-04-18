@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import com.example.beijingnews.R;
 import com.example.beijingnews.base.BaseActivity;
 import com.example.beijingnews.main.MainActivity;
+import com.example.beijingnews.utils.SpUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,11 @@ public class GuideActivity extends BaseActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(SpUtils.getBoolean("guide",false)){
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+        }
+        SpUtils.setSp("guide",true);
         initView();
         initData();
         initListener();

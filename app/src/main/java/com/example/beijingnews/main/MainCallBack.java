@@ -1,7 +1,6 @@
 package com.example.beijingnews.main;
 
 import com.example.beijingnews.base.BaseCallBack;
-import com.example.beijingnews.model.bean.Bean;
 
 /**
  * Created by Android Studio.

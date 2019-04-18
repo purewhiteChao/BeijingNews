@@ -9,5 +9,5 @@ package com.example.beijingnews.model.uri;
  */
 public class UploadURI {
     public static final String uploadURI = "https://sm.ms/api/";
-    public static final String localZHBJ = "http://10.0.2.2:8080/zhbj/";
+    public static final String localZHBJ = "http://169.254.190.114:8080/zhbj/";
 }

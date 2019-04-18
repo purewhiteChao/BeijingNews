@@ -12,7 +12,7 @@
         <item name="android:windowBackground">@drawable/splash_bg_newyear</item>
     </style>
     <style name="WelcomeThrme">
-        <item name="android:windowBackground">@drawable/heidong</item>
+        <item name="android:windowBackground">@drawable/splash_bg_newyear</item>
         <item name="android:windowFullscreen">true</item>
     </style>
 

@@ -3,7 +3,7 @@ package com.example.beijingnews.main;
 import com.example.beijingnews.model.service.RetroService;
 import com.example.beijingnews.base.BaseModel;
 import com.example.beijingnews.model.bean.AvatarBean;
-import com.example.beijingnews.model.bean.Bean;
+import com.example.beijingnews.model.bean.NewsBean;
 
 import java.io.File;
 
@@ -38,11 +38,11 @@ public class MainModel extends BaseModel<MainCallBack> {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
         RetroService retroService = retrofit.create(RetroService.class);
-        Observable<Bean> http = retroService.getHttp("1", "20", "1");
+        Observable<NewsBean> http = retroService.getHttp();
 
         http.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<Bean>() {
+                .subscribe(new Observer<NewsBean>() {
                     @Override
                     public void onCompleted() {
 
@@ -55,9 +55,10 @@ public class MainModel extends BaseModel<MainCallBack> {
                     }
 
                     @Override
-                    public void onNext(Bean bean) {
+                    public void onNext(NewsBean bean) {
 
                         callBack.successful(bean);
+
 
                     }
                 });
