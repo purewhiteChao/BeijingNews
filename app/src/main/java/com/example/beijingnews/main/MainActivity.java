@@ -38,6 +38,8 @@ import com.example.beijingnews.view.fragment.NewsFragment;
 import com.example.beijingnews.view.fragment.ServiceFragment;
 import com.example.beijingnews.view.fragment.SettingFragment;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -223,6 +225,7 @@ public class MainActivity extends MVPActivity<MainPresenter, MainView, NewsBean>
 
         Log.i("GC", data.getData().get(0).getTitle());
         data1 = data.getData();
+        EventBus.getDefault().post(data1.get(0).getChildren());
         Menu menu = navigation_main.getMenu();
         for (int i = 0; i < data1.size(); i++) {
             NewsBean.DataBean dataBean = data1.get(i);

@@ -1,19 +1,14 @@
-package com.example.beijingnews.view;
+package com.example.beijingnews.news;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
-import android.text.Layout;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.beijingnews.R;
 import com.example.beijingnews.model.bean.NewsBean;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,6 +20,8 @@ import java.util.List;
  */
 public class NewsPagerAdapter extends PagerAdapter {
     private List<NewsBean.DataBean.ChildrenBean> list_Str;
+    private NewsPagerManager manager;
+
     public NewsPagerAdapter(List<NewsBean.DataBean.ChildrenBean> list_Str){
         this.list_Str = list_Str;
     }
@@ -48,8 +45,8 @@ public class NewsPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         Context context = container.getContext();
-        View view = LayoutInflater.from(context).inflate(R.layout.news_pager,container,false);
-        container.addView(view);
+        manager = new NewsPagerManager(container,position);
+        View view = manager.initView();
         return view;
     }
 
