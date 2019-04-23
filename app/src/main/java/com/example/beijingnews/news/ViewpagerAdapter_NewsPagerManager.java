@@ -2,6 +2,7 @@ package com.example.beijingnews.news;
 
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.beijingnews.R;
 import com.example.beijingnews.model.bean.NewPagerBean;
+import com.example.beijingnews.model.uri.UploadURI;
 
 import java.util.List;
 
@@ -43,7 +45,11 @@ public class ViewpagerAdapter_NewsPagerManager extends PagerAdapter {
         ImageView imageView = view.findViewById(R.id.imageview_viewpager_newspager);
         TextView textView = view.findViewById(R.id.text_viewpager_newpager);
         textView.setText(list.get(position).getTitle());
-        Glide.with(container.getContext()).load(list.get(position).getTopimage()).into(imageView);
+        //http://10.0.2.2:8080/zhbj/10006/1452327318UU91.jpg
+        String substring = list.get(position).getTopimage().substring(15);
+        Log.i("GC",substring);
+        Glide.with(container.getContext()).load(UploadURI.dowmPicture +substring).into(imageView);
+        container.addView(view);
         return view;
     }
 
