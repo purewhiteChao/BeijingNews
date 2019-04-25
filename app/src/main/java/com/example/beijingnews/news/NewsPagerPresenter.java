@@ -12,12 +12,18 @@ import com.example.beijingnews.model.bean.NewPagerBean;
  */
 public class NewsPagerPresenter extends BasePresenter<NewsPagerView> {
 
-    public void getData(String url){
+    private boolean flag;
+    public void getData(String url, final boolean flag){
+        this.flag = flag;
         new NewPagerModel().get(url, new NewPagerCallBack() {
             @Override
             public void successful(NewPagerBean newPagerBean) {
 
-                getView().success(newPagerBean);
+                if(flag){
+                    getView().success(newPagerBean);
+                }else{
+                    getView().loadMore(newPagerBean);
+                }
             }
 
             @Override

@@ -28,6 +28,12 @@ public class RecyclerAdapter_newspager extends RecyclerView.Adapter<RecyclerAdap
     private List<NewPagerBean.DataBean.NewsBean> list;
     private Context context;
 
+    public void refresh(List<NewPagerBean.DataBean.NewsBean> list){
+        this.list.addAll(list);
+        notifyDataSetChanged();
+
+    }
+
     public RecyclerAdapter_newspager(List<NewPagerBean.DataBean.NewsBean> list){
         this.list = list;
     }

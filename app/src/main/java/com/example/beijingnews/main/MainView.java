@@ -13,4 +13,5 @@ import com.example.beijingnews.model.bean.NewsBean;
  */
 public interface MainView extends BaseView<NewsBean> {
     public void getAvater(AvatarBean bean);
+
 }

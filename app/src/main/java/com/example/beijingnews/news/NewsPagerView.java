@@ -1,6 +1,7 @@
 package com.example.beijingnews.news;
 
 import com.example.beijingnews.base.BaseView;
+import com.example.beijingnews.model.bean.AvatarBean;
 import com.example.beijingnews.model.bean.NewPagerBean;
 
 /**
@@ -11,5 +12,6 @@ import com.example.beijingnews.model.bean.NewPagerBean;
  * Describe: ${as}
  */
 public interface NewsPagerView extends BaseView<NewPagerBean> {
+    public void loadMore(NewPagerBean bean);
 
 }
